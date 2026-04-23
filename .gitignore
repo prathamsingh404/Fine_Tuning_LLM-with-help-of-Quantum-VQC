@@ -1,0 +1,26 @@
+# Local Database
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Model Checkpoints
+*.pt
+
+# Data & History (legacy)
+vocab.json
+quantum_history.json
+classical_history.json
+
+# Visualizations
+*.png
+!assets/*.png
+
+# IDEs
+.vscode/
+.idea/
