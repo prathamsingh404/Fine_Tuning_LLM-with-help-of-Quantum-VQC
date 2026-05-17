@@ -8,8 +8,6 @@ training metrics, inference logs, and the SST-2 dataset.
 
 import sqlite3
 import json
-import os
-from datetime import datetime
 import pandas as pd
 
 DB_PATH = "quantum_nlp.db"
