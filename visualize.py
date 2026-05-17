@@ -40,8 +40,8 @@ def get_latest_histories():
         q_id = q_exp.iloc[0]['id']
         c_id = c_exp.iloc[0]['id']
         
-        q_metrics = pd.read_sql_query(f"SELECT * FROM metrics WHERE experiment_id={q_id} ORDER BY epoch ASC", conn)
-        c_metrics = pd.read_sql_query(f"SELECT * FROM metrics WHERE experiment_id={c_id} ORDER BY epoch ASC", conn)
+        q_metrics = pd.read_sql_query("SELECT * FROM metrics WHERE experiment_id=? ORDER BY epoch ASC", conn, params=(q_id,))
+        c_metrics = pd.read_sql_query("SELECT * FROM metrics WHERE experiment_id=? ORDER BY epoch ASC", conn, params=(c_id,))
         
         return {
             "metrics": q_metrics, "best_val_acc": q_exp.iloc[0]['best_val_acc'], "params": q_exp.iloc[0]['params']
