@@ -9,11 +9,7 @@ import os
 import json
 import torch
 import streamlit as st
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from PIL import Image
 from model import QuantumTransformer, ClassicalTransformer
 from database import DatabaseManager
 import time
