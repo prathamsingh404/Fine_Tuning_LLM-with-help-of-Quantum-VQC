@@ -127,6 +127,16 @@ class DatabaseManager:
             """, (experiment_id, epoch, train_loss, val_loss, train_acc, val_acc))
             conn.commit()
 
+    def log_metrics_many(self, metrics_list):
+        """Log metrics for multiple epochs efficiently."""
+        with self._get_connection() as conn:
+            cursor = conn.cursor()
+            cursor.executemany("""
+                INSERT INTO metrics (experiment_id, epoch, train_loss, val_loss, train_acc, val_acc)
+                VALUES (?, ?, ?, ?, ?, ?)
+            """, metrics_list)
+            conn.commit()
+
     # --- Prediction Methods ---
     def log_prediction(self, input_text, model_name, prediction, confidence, latency=0.0):
         """Log an inference request."""
