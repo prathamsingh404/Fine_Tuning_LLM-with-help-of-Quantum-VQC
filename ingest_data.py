@@ -40,16 +40,18 @@ def main():
                 total_time=hist.get("total_time", 0.0)
             )
 
-            # Log epoch metrics
+            # Log epoch metrics efficiently
+            metrics_list = []
             for i in range(len(hist["train_loss"])):
-                db.log_metrics(
-                    experiment_id=exp_id,
-                    epoch=i + 1,
-                    train_loss=hist["train_loss"][i],
-                    val_loss=hist["val_loss"][i],
-                    train_acc=hist["train_acc"][i],
-                    val_acc=hist["val_acc"][i]
-                )
+                metrics_list.append((
+                    exp_id,
+                    i + 1,
+                    hist["train_loss"][i],
+                    hist["val_loss"][i],
+                    hist["train_acc"][i],
+                    hist["val_acc"][i]
+                ))
+            db.log_metrics_many(metrics_list)
             print(f"[OK] Migrated {model_name} history")
         else:
             print(f"[History] {hist_path} not found. Skipping.")
