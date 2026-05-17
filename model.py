@@ -5,10 +5,9 @@ Defines high-performance Quantum and Classical Transformers for Sentiment Analys
 Both models now feature Residual Connections and optimized bottlenecks.
 """
 
-import math
 import torch
 import torch.nn as nn
-from quantum_layer import QuantumAttentionLayer, N_QUBITS
+from quantum_layer import QuantumAttentionLayer
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Shared hyper-parameters
