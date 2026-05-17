@@ -49,9 +49,9 @@ def get_models():
     q_model = QuantumTransformer()
     c_model = ClassicalTransformer()
     if os.path.exists("quantum_best.pt"):
-        q_model.load_state_dict(torch.load("quantum_best.pt", map_location=DEVICE))
+        q_model.load_state_dict(torch.load("quantum_best.pt", map_location=DEVICE, weights_only=True))
     if os.path.exists("classical_best.pt"):
-        c_model.load_state_dict(torch.load("classical_best.pt", map_location=DEVICE))
+        c_model.load_state_dict(torch.load("classical_best.pt", map_location=DEVICE, weights_only=True))
     q_model.eval(); c_model.eval()
     return q_model, c_model
 
