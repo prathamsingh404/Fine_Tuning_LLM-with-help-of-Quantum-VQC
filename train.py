@@ -5,16 +5,13 @@ High-performance training pipeline with AdamW, Cosine Annealing,
 Label Smoothing, and SQLite logging.
 """
 
-import json
 import time
-import os
 from collections import Counter
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from tqdm import tqdm
-import numpy as np
 
 # ── Local ─────────────────────────────────────────────────────────────────────
 from model import QuantumTransformer, ClassicalTransformer
