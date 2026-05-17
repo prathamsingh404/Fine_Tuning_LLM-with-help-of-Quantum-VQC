@@ -4,14 +4,9 @@ visualize.py
 Generates plots by pulling recent experiment data from the SQLite database.
 """
 
-import os
-import sqlite3
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
-import torch
-from model import QuantumTransformer, ClassicalTransformer
 from database import DatabaseManager
 
 # Global Style
