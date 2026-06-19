@@ -98,4 +98,4 @@ pip install -r requirements.txt
 
 This repository serves as a research benchmark for **Hybrid Classical-Quantum Intelligence**. By combining the linguistic prowess of Transformers with the geometric complexity of Hilbert spaces, we aim to solve the next generation of NLP challenges.
 
-**Developed with ❤️ and Physics.**
+
