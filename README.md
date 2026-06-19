@@ -1,6 +1,5 @@
 # ⚛️ Quantum-Enhanced Sentiment Analysis Engine
 
-![Quantum NLP Banner](assets/banner.png)
 
 ## 🚀 Overview
 
