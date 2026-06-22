@@ -92,7 +92,7 @@ pip install -r requirements.txt
 2. **Train**: `python train.py` (High-performance hybrid training)
 3. **Launch UI**: `streamlit run app.py` (Explore the live demo and histories)
 
----
+--
 
 ## 🌌 The Future of Quantum NLP
 
