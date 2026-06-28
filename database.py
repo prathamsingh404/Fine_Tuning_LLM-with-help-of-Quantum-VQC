@@ -7,6 +7,7 @@ training metrics, inference logs, and the SST-2 dataset.
 """
 
 import sqlite3
+import matplotlib as plt
 import json
 import os
 from datetime import datetime
