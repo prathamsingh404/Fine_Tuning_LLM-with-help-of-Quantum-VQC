@@ -1,4 +1,4 @@
-# ⚛️ Quantum-Enhanced Sentiment Analysis Engine
+#  Quantum-Enhanced Sentiment Analysis Engine
 
 
 ## 🚀 Overview
